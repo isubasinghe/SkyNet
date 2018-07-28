@@ -1,12 +1,5 @@
 // Send Location to Server
 
-
-window.onload = function() {
-	document.getElementById('submit-id').onsubmit()=function() {
-		alert('hi');
-	}
-}
-
 function sendLocation() {
 	var xhr = new XMLHttpRequest();
 var url = "vpool.tech";
@@ -15,6 +8,7 @@ xhr.setRequestHeader("Content-Type", "application/json");
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         var json = JSON.parse(xhr.responseText);
+        console.log(json);
     }
 };
 
