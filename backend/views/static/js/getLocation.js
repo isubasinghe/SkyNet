@@ -12,7 +12,8 @@ options = {
 
 var coords = {
     lat: null,
-    lng: null
+    lng: null,
+    id: user1
 }
 
 if (navigator.geolocation){
