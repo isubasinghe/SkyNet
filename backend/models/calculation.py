@@ -65,9 +65,10 @@ def calculate(hub, locations):
                 "hub": hub,
                 "coords": []
             }
-            data["coords"].append(hub)
+            #data["coords"].append(hub)
             for i in route[1:]:
                 data["coords"].append(locations[i-1])
+            data["coords"] = data["coords"][:-1]
             return data
         else:
             return None
