@@ -24,7 +24,7 @@ function calculateAndDisplayRoute(userDestination, hub) {
   });
 
   hubCoords = hub[0]+","+hub[1];
-
+  
   directionsService.route({
     origin: hubCoords,
     destination: hubCoords,

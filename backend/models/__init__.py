@@ -42,7 +42,17 @@ def add_fake_coords():
     
     conn.close()
 
-    
+
+def get_user_coords(user):
+    conn = r.connect("192.168.99.100", 32769)
+    cursor = r.table('users').filter({"user": user}).run(conn)
+    for document in cursor:
+
+        retval =  document["location"]["coordinates"]
+        retval.reverse()
+        break
+    conn.close()
+    return retval    
 
 def get_coords():
     conn = r.connect("192.168.99.100", 32769)

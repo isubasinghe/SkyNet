@@ -8,7 +8,7 @@ from models.calculation import calculate
 
 app = Flask(__name__)
 
-HUB = [-37.7116, 144.9646 - 0.1000]
+HUB = [-37.8116, 144.9646]
 
 @app.route('/')
 def index_handle():
@@ -23,7 +23,7 @@ def get_post():
     coords.append(content["lng"])
     coords.append(content["lat"])
     models.insert_coords(id, coords, False)
-    json_data = calculate(HUB, models.get_coords())
+    json_data = calculate(id, HUB, models.get_coords())
     if json_data == None:
         abort(400)
     print(json_data)
@@ -46,6 +46,8 @@ if __name__ == '__main__':
     # models.add_fake_users()
     models.set_true()
     models.add_fake_coords()
+
+    #print(models.get_user_coords("user_0"))
     #models.insert_coords("user_0", [60, 70], False)
     
     #print(models.get_coords()) #
