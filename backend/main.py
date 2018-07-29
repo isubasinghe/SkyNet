@@ -14,6 +14,9 @@ HUB = [-37.8116, 144.9646]
 def index_handle():
     return send_from_directory('html', 'main.html')
 
+@app.route('/assets/<path:path>')
+def get_img(path):
+    return send_from_directory('assets', path)
 
 @app.route('/api', methods=['POST'])
 def get_post():
