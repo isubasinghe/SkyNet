@@ -14,3 +14,7 @@ initMap = function () {
     });
     directionsDisplay.setMap(map);
 }
+
+function displayMessage(message) {
+    document.getElementById("DesTitle").innerHTML = 'Your ride will arrive in ' + String(Math.round(message))+' mins';
+}

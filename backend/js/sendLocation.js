@@ -10,8 +10,9 @@ function sendLocation() {
             var json = JSON.parse(xhr.responseText);
             var hub = json.hub;
             var user_coords = json.coords;
+            var time_minutes = json.time_minutes;
             calculateAndDisplayRoute(user_coords, hub);
-
+            displayMessage(time_minutes)
             console.log(json);
         }
     };
