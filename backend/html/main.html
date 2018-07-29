@@ -2,19 +2,26 @@
 <html>
 <style>
   #map {
-    height: 100vh;
+    height: 85vh;
   }
   html, body {
     height: 100%;
-    margin: 0;
+    margin:  0;
     padding: 0;
   }
+  #submit {
+    position: relative;
+    top: -60px;
+    left: 43%;
+    z-index: 99;
+  }
+
 
 </style>
 <head>
 	<title>
 	VPool
-	</title>
+  </title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 <script
@@ -25,13 +32,18 @@
 
 
 <body>
-	<h1 class="mdl-layout__header"> Hello world
-	</h1>
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="sendLocation()" >PRESS ME!!</button>
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit" >dothething</button>
-<main>
+	
 
-	<div id="map"></div>
+<main>
+  
+    <header class="mdl-layout__header">
+      </header>
+	<div id="map">
+    <!--<button id="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="sendLocation()" >PRESS ME!!</button>
+  -->
+  </div>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit" onclick="sendLocation()" >Request Ride</button>
+
 </main>
 
 
